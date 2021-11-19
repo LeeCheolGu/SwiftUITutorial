@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C3881D427477CA600E87212 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 4C3881D327477CA600E87212 /* ComposableArchitecture */; };
+		4C3881D927478A8400E87212 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3881D827478A8400E87212 /* AppState.swift */; };
+		4C3881E12747A43000E87212 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3881E02747A43000E87212 /* AppAction.swift */; };
+		4C3881E72747A4E500E87212 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3881E62747A4E500E87212 /* AppReducer.swift */; };
 		4C9B5A1D2743A539004196C6 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B5A1C2743A539004196C6 /* SwiftUIView.swift */; };
 		4C9B5A1E2743A539004196C6 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B5A1C2743A539004196C6 /* SwiftUIView.swift */; };
 		4CB44CCE2700607F00F482AF /* SwiftUIToturoial.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CB44CB82700607D00F482AF /* SwiftUIToturoial.xcdatamodeld */; };
@@ -27,6 +31,9 @@
 		18E628193E5F00F457C210F8 /* Pods_SwiftUIToturoial__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIToturoial__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E9117E94AE2F4272A318E8 /* Pods-SwiftUIToturoial (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIToturoial (macOS).debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIToturoial (macOS)/Pods-SwiftUIToturoial (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		29586FE842F367845D154073 /* Pods-SwiftUIToturoial (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIToturoial (macOS).release.xcconfig"; path = "Target Support Files/Pods-SwiftUIToturoial (macOS)/Pods-SwiftUIToturoial (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		4C3881D827478A8400E87212 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		4C3881E02747A43000E87212 /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		4C3881E62747A4E500E87212 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		4C9B5A1C2743A539004196C6 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		4CB44CB92700607D00F482AF /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		4CB44CBA2700607D00F482AF /* SwiftUIToturoialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIToturoialApp.swift; sourceTree = "<group>"; };
@@ -48,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3881D427477CA600E87212 /* ComposableArchitecture in Frameworks */,
 				B40EA3B1C5AE7144CD7DE48B /* Pods_SwiftUIToturoial__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +71,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C3881D727478A5B00E87212 /* Composable */ = {
+			isa = PBXGroup;
+			children = (
+				4C3881D827478A8400E87212 /* AppState.swift */,
+				4C3881E02747A43000E87212 /* AppAction.swift */,
+				4C3881E62747A4E500E87212 /* AppReducer.swift */,
+			);
+			path = Composable;
+			sourceTree = "<group>";
+		};
 		4CB44CB22700607C00F482AF = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +96,7 @@
 		4CB44CB72700607D00F482AF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4C3881D727478A5B00E87212 /* Composable */,
 				4CB44CBA2700607D00F482AF /* SwiftUIToturoialApp.swift */,
 				4CB44CBB2700607D00F482AF /* ContentView.swift */,
 				4CB44CBC2700607D00F482AF /* Persistence.swift */,
@@ -131,7 +150,6 @@
 				27E9117E94AE2F4272A318E8 /* Pods-SwiftUIToturoial (macOS).debug.xcconfig */,
 				29586FE842F367845D154073 /* Pods-SwiftUIToturoial (macOS).release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,6 +170,9 @@
 			dependencies = (
 			);
 			name = "SwiftUIToturoial (iOS)";
+			packageProductDependencies = (
+				4C3881D327477CA600E87212 /* ComposableArchitecture */,
+			);
 			productName = "SwiftUIToturoial (iOS)";
 			productReference = 4CB44CC22700607F00F482AF /* SwiftUIToturoial.app */;
 			productType = "com.apple.product-type.application";
@@ -200,6 +221,9 @@
 				Base,
 			);
 			mainGroup = 4CB44CB22700607C00F482AF;
+			packageReferences = (
+				4C3881D227477CA600E87212 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 4CB44CC32700607F00F482AF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -281,10 +305,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3881E12747A43000E87212 /* AppAction.swift in Sources */,
 				4CB44CCE2700607F00F482AF /* SwiftUIToturoial.xcdatamodeld in Sources */,
 				4CB44CD42700607F00F482AF /* Persistence.swift in Sources */,
 				4CB44CD02700607F00F482AF /* SwiftUIToturoialApp.swift in Sources */,
+				4C3881D927478A8400E87212 /* AppState.swift in Sources */,
 				4CB44CD22700607F00F482AF /* ContentView.swift in Sources */,
+				4C3881E72747A4E500E87212 /* AppReducer.swift in Sources */,
 				4C9B5A1D2743A539004196C6 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,6 +564,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4C3881D227477CA600E87212 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C3881D327477CA600E87212 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C3881D227477CA600E87212 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4CB44CB82700607D00F482AF /* SwiftUIToturoial.xcdatamodeld */ = {

@@ -7,17 +7,21 @@
 
 import SwiftUI
 import CoreData
+import ComposableArchitecture
 
 struct userInfo {
     var userId: String
     var userIdx: Int
 }
-
 struct ContentView: View {
+    
     @State var email = ""
     @State var password = ""
     var body: some View {
         VStack{
+            VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
+                Text("Placeholder")
+            }).padding(.bottom, 100)
             VStack(alignment: .leading, spacing: 15, content: {
                 Text("아이디")
                     .fontWeight(.bold)
@@ -39,32 +43,35 @@ struct ContentView: View {
                 Divider()
             }).padding(.top, 5)
             
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                Text("로그인")
-                    .foregroundColor(.red)
-                    .font(.system(size: 15))
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    .frame(width: 300, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 30)
-                            .stroke(Color.red, lineWidth: 2)
-                    )
-                    .padding(.top, 15)
+            VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 0, content: {
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Text("로그인")
+                        .foregroundColor(.red)
+                        .font(.system(size: 15))
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .frame(width: 300, height: 55, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 30)
+                                .stroke(Color.red, lineWidth: 2)
+                        )
+                        .padding(.top, 15)
+                })
             })
+            
             
             
             Button(action: {print("user email:", $email)}, label: {
                 HStack{
-                    Text("큐비가 처음이시가요?")
+                    Text("처음이신가요?")
                         .foregroundColor(.black)
                     Text("회원가입")
                         .foregroundColor(.red)
                         .fontWeight(.bold)
                 }
             })
+            .padding(.top, 100)
         }
         .padding(30)
-        
         
     }
 }
